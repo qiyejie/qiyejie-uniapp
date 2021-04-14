@@ -35,7 +35,7 @@ sass-loader@^10.1.1
 ```
 
 ### %PLATFORM% 可取值如下：
-```
+
 | 值         | 平台      | 
 
 | -----------| ---------|
@@ -62,5 +62,3 @@ sass-loader@^10.1.1
 
 |quickapp-webview-huawei|	快应用华为|
 
-
-```
