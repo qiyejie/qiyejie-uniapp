@@ -1,6 +1,6 @@
 {
   "name": "qiyejie-frontend",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "serve": "npm run dev:h5",
@@ -58,10 +58,15 @@
     "@dcloudio/uni-quickapp-webview": "^2.0.0-31820210406002",
     "@dcloudio/uni-stat": "^2.0.0-31820210406002",
     "@vue/shared": "^3.0.0",
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
+    "date-fns": "^2.19.0",
     "flyio": "^0.6.2",
+    "js-cookie": "^2.2.1",
+    "qs": "^6.10.1",
     "regenerator-runtime": "^0.12.1",
-    "vue": "^2.6.11",
+    "thorui-uni": "^1.6.1",
+    "vue": "^2.6.12",
     "vuex": "^3.2.0"
   },
   "devDependencies": {
@@ -78,13 +83,19 @@
     "@dcloudio/webpack-uni-pages-loader": "^2.0.0-31820210406002",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
+    "adbkit": "^2.11.1",
     "babel-plugin-import": "^1.11.0",
     "cross-env": "^7.0.2",
     "jest": "^25.4.0",
+    "jimp": "^0.10.3",
     "mini-types": "*",
     "miniprogram-api-typings": "*",
+    "node-simctl": "^6.4.1",
     "postcss-comment": "^2.0.0",
-    "vue-template-compiler": "^2.6.11"
+    "sass": "^1.32.8",
+    "sass-loader": "^10.1.1",
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^4.46.0"
   },
   "browserslist": [
     "Android >= 4",

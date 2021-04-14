@@ -1,16 +1,91 @@
 {
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-		{
+	"pages": [{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "消息",
+				"app-plus": {
+					"titleNView": {
+						"searchInput": {
+							"backgroundColor": "#fff",
+							"borderRadius": "6px", //输入框圆角
+							"placeholder": "搜索"
+						}
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/collaboration/collaboration",
+			"style": {
+				"navigationBarTitleText": "协作"
+			}
+		},
+		{
+			"path": "pages/work/work",
+			"style": {
+				"navigationBarTitleText": "工作台"
+			}
+		},
+		{
+			"path": "pages/contact/contact",
+			"style": {
+				"navigationBarTitleText": "通讯录"
+			}
+		},
+		{
+			"path": "pages/me/me",
+			"style": {
+				"navigationStyle":"custom"
+			}
+		},
+		{
+			"path": "pages/login/login",
+			"style": {
+				 "navigationStyle":"custom",
+				 "backgroundColor":"#FFFFFF"
 			}
 		}
 	],
 	"globalStyle": {
-		"navigationBarTextStyle": "black",
+		// "navigationStyle":"custom",
+		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+		"navigationBarBackgroundColor": "#1cbbb4",
+		"backgroundColor": "#FFFFFF"
+	},
+	"tabBar": {
+		"color": "#8a8a8a",
+		"selectedColor": "#1cbbb4",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/image/msg.png",
+				"selectedIconPath": "static/image/msg-s.png",
+				"text": "消息"
+			},
+			{
+				"pagePath": "pages/collaboration/collaboration",
+				"iconPath": "static/image/collaboration.png",
+				"selectedIconPath": "static/image/collaboration-s.png",
+				"text": "协作"
+			},
+			{
+				"pagePath": "pages/work/work",
+				"iconPath": "static/image/work.png",
+				"selectedIconPath": "static/image/work-s.png",
+				"text": "工作台"
+			},
+			{
+				"pagePath": "pages/contact/contact",
+				"iconPath": "static/image/contact.png",
+				"selectedIconPath": "static/image/contact-s.png",
+				"text": "通讯录"
+			},
+			{
+				"pagePath": "pages/me/me",
+				"iconPath": "static/image/me.png",
+				"selectedIconPath": "static/image/me-s.png",
+				"text": "我的"
+			}
+		]
 	}
 }

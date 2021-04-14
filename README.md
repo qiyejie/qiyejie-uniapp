@@ -1,5 +1,9 @@
 # qiyejie-frontend
 
+## 本项目用于服务企业捷的前端业务
+
+**项目基于Vue.js的Uni-App**
+
 ## Project setup
 ```
 npm install
@@ -15,5 +19,9 @@ npm run serve
 npm run build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### npm i --save-dev
+```
+webpack@^4.0.0
+sass-loader
+sass-loader@^10.1.1
+```
