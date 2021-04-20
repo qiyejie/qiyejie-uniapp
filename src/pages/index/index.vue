@@ -6,6 +6,7 @@
         :class="modalName == 'move-box-' + index ? 'move-cur' : ''"
         v-for="(item, index) in messageArray"
         :key="index"
+        @click="toChat"
         @touchstart="ListTouchStart"
         @touchmove="ListTouchMove"
         @touchend="ListTouchEnd"
@@ -16,9 +17,9 @@
           :style="[
             {
               backgroundImage:
-                'url(https://ossweb-img.qq.com/images/lol/web201310/skin/big2100' +
-                (index + 2) +
-                '.jpg)'
+                'url(http://icon.tanyang.asia/t0' +
+                (index) +
+                '.jpeg)'
             }
           ]"
         ></view>
@@ -57,32 +58,32 @@ export default {
     return {
       messageArray: [
         {
-          name: '张三',
-          preContent: '预览消息内容',
+          name: '博远',
+          preContent: 'OK',
           newMsg: 0,
-          time: '今天',
+          time: '10:42',
           failure: false
         },
         {
-          name: '李四',
-          preContent: 'djdscfsdcdsv',
-          newMsg: 3,
-          time: '今天',
+          name: '张升',
+          preContent: '明天肯定给你答复！',
+          newMsg: 6,
+          time: '10:08',
           failure: false
         },
         {
-          name: '兰兰',
-          preContent: 'djdscfsdcdsv',
+          name: '秀良',
+          preContent: '约个会议室吧',
           newMsg: 4,
+          time: '09:03',
+          failure: false
+        },
+        {
+          name: '小明',
+          preContent: '持续跟进这个项目哈~',
+          newMsg: 5,
           time: '昨天',
           failure: false
-        },
-        {
-          name: 'Jason',
-          preContent: '啦啦啦啦',
-          newMsg: 5,
-          time: '今天',
-          failure: true
         }
       ],
       cuIconList: [
@@ -159,6 +160,11 @@ export default {
     }
   },
   methods: {
+    toChat() {
+      uni.navigateTo({
+				url: '/pages/chat/chat'
+			})
+    },
     open() {
       this.$refs.popup.open()
     },
@@ -231,7 +237,7 @@ export default {
     float: right;
   }
 }
-// .uni-badge {
-// 	padding: 0;
-// }
+.message-content {
+  border-bottom: none;
+}
 </style>

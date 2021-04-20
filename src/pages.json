@@ -14,6 +14,12 @@
 				}
 			}
 		},
+    {
+			"path": "pages/chat/chat",
+			"style": {
+				"navigationBarTitleText": "博远"
+			}
+		},
 		{
 			"path": "pages/collaboration/collaboration",
 			"style": {
