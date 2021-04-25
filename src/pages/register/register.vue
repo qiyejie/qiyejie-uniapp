@@ -10,8 +10,8 @@
     </div>
     <view class="register-form">
       <view class="cu-form-group">
-        <view class="title">企业捷ID</view>
-        <input placeholder="请输入企业捷ID" name="input" v-model="qyj_id" />
+        <view class="title">设置邮箱</view>
+        <input placeholder="请输入邮箱" name="input" v-model="email" />
       </view>
       <view class="cu-form-group">
         <view class="title">设置密码</view>
@@ -35,36 +35,44 @@
         注册
       </button>
     </view>
-    <tui-tips ref="toast" position="center"></tui-tips>
+    <tui-toast ref="toast" position="center"></tui-toast>
   </div>
 </template>
 
 <script>
-import tuiTips from 'thorui-uni/lib/thorui/tui-tips/tui-tips'
+import tuiToast from 'thorui-uni/lib/thorui/tui-toast/tui-toast'
+import { userRegister } from '@/api'
 
 export default {
   data: () => ({
-    qyj_id: '',
+    email: '',
     password: '',
     password_second: ''
   }),
   components: {
-    tuiTips
+    tuiToast
   },
   methods: {
     validate() {
       let options = {
-        msg: '两次输入的密码不一致~',
-        duration: 2000
+        title: '两次密码输入不一致',
+        icon: false
       }
       if (!(this.password === this.password_second)) {
-        this.$refs.toast.showTips(options)
+        this.$refs.toast.show(options)
         return false
       } else return true
     },
     submit() {
       if (!this.validate()) return
-      console.log(11111)
+      const data = {
+        email: this.email,
+        password: this.password
+      }
+      userRegister(data).then(res =>
+      console.log(res)
+              // this.$refs.toast.show({ title: res.data.message, icon: false })
+      )
     }
   }
 }
