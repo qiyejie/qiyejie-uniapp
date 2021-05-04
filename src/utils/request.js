@@ -6,7 +6,7 @@ import qs from 'qs'
 
 class Request {
 	constructor(baseURL, headers = {
-		'content-type': 'application/x-www-form-urlencoded'
+		'content-type': 'application/json'
 	}) {
 		this.request = axios.create({
 			baseURL,
