@@ -56,7 +56,7 @@ class Request {
 	}
 	post(url, data, config = {
 		headers: {
-			'content-type': 'application/x-www-form-urlencoded'
+			'content-type': 'application/json'
 		}
 	}, useStringifyData = true) {
 		return this.request.post(url, (useStringifyData ? qs.stringify(data) : data), config)
