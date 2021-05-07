@@ -1,13 +1,13 @@
 <template>
-  <div class="register">
-    <div class="register-title">
+  <view class="register">
+    <view class="register-title">
       欢迎注册企业捷
       <image
         class="register-logo"
         src="../../static/logo/logo.png"
         mode="aspectFit"
       ></image>
-    </div>
+    </view>
     <view class="register-form">
       <view class="cu-form-group">
         <view class="title">设置邮箱</view>
@@ -36,11 +36,10 @@
       </button>
     </view>
     <tui-toast ref="toast" position="center"></tui-toast>
-  </div>
+  </view>
 </template>
 
 <script>
-import tuiToast from 'thorui-uni/lib/thorui/tui-toast/tui-toast'
 import { userRegister } from '@/api'
 
 export default {
@@ -50,7 +49,7 @@ export default {
     password_second: ''
   }),
   components: {
-    tuiToast
+    
   },
   methods: {
     validate() {

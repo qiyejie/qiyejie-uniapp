@@ -6,7 +6,7 @@ import qs from 'qs'
 
 class Request {
 	constructor(baseURL, headers = {
-		'content-type': 'application/json'
+		'content-type': 'application/x-www-form-urlencoded'
 	}) {
 		this.request = axios.create({
 			baseURL,
@@ -56,7 +56,7 @@ class Request {
 	}
 	post(url, data, config = {
 		headers: {
-			'content-type': 'application/json'
+			'content-type': 'application/x-www-form-urlencoded'
 		}
 	}, useStringifyData = true) {
 		return this.request.post(url, (useStringifyData ? qs.stringify(data) : data), config)

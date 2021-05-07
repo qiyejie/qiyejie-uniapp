@@ -9,8 +9,8 @@
     </view>
     <view class="login-form">
       <view class="cu-form-group">
-        <view class="title">企业捷ID</view>
-        <input placeholder="请输入企业捷ID" name="input" v-model="qyj_id" />
+        <view class="title">邮箱</view>
+        <input placeholder="请输入注册邮箱账号" name="input" v-model="qyj_id" />
       </view>
       <view class="cu-form-group">
         <view class="title">密码</view>
