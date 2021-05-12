@@ -1,4 +1,4 @@
-# qiyejie-frontend
+# qiyejie-uniapp
 
 ## 本项目用于服务企业捷的前端业务
 
