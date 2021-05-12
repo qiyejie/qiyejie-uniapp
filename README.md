@@ -6,7 +6,7 @@
 **创建uni-app**
 ***项目构建使用正式版（对应HBuilderX最新正式版）***
 ```
-vue create -p dcloudio/uni-preset-vue qiyejie-frontend
+vue create -p dcloudio/uni-preset-vue qiyejie-uniapp
 ```
 
 ## Project setup
