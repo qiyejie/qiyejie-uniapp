@@ -1,5 +1,6 @@
 <template>
-	<view class="me"><tui-list-cell arrow @click="toLogin">去登录</tui-list-cell></view>
+	<view class="me">
+    <tui-list-cell arrow @click="toLogin">去登录</tui-list-cell></view>
 </template>
 
 <script>

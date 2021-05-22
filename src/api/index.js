@@ -10,6 +10,10 @@ export function userRegister(data) {
 	return request.post('/user/user_register.php',data)
 }
 
+export function userLogin(data) {
+	return request.post('/user/user_login.php',data)
+}
+
 export function userChangeInfo(params) {
 	return request.get('/user/user_change_info.php',params)
 }

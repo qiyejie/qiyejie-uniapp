@@ -13,6 +13,6 @@ function getCurrentEnvUrl (urlMap) {
 }
 
 export const baseURL = getCurrentEnvUrl({
-  dev: 'http://develop.tanyang.asia/backend/api',
-  pro: 'https://backend.tanyang.asia/backend/api'
+  dev: 'http://develop.e-wolf.top/backend/api',
+  pro: 'http://develop.e-wolf.top/backend/api'
 })

@@ -10,7 +10,7 @@
     <view class="login-form">
       <view class="cu-form-group">
         <view class="title">邮箱</view>
-        <input placeholder="请输入注册邮箱账号" name="input" v-model="qyj_id" />
+        <input placeholder="请输入注册邮箱账号" name="input" v-model="email" />
       </view>
       <view class="cu-form-group">
         <view class="title">密码</view>
@@ -32,14 +32,23 @@
 </template>
 
 <script>
+import { userLogin } from '@/api'
+
 export default {
   data: () => ({
-    qyj_id: '',
+    email: '',
     password: ''
   }),
   methods: {
     login() {
-      console.log(111, this.qyj_id, this.password)
+      const data = {
+        email: this.email,
+        password: this.password
+      }
+      userLogin(data).then(res =>
+      console.log(res)
+              // this.$refs.toast.show({ title: res.data.message, icon: false })
+      )
     },
     toRegister() {
       uni.navigateTo({
