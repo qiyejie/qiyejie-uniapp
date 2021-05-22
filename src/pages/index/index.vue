@@ -159,7 +159,20 @@ export default {
       listTouchDirection: null
     }
   },
+  created(){
+    this.onWebSocket()
+  },
   methods: {
+    onWebSocket() {
+      let ws = new WebSocket('ws://81.70.194.69:1234');
+      console.log('WebSocket:',ws);
+      ws.onopen = function(evt) { 
+        console.log("Connection open ..."); 
+        ws.send("Hello WebSockets!");
+      ws.onmessage = function(evt) {
+        console.log( "Received Message: " + evt);
+      }} 
+    },
     toChat() {
       uni.navigateTo({
 				url: '/pages/chat/chat'
