@@ -168,10 +168,13 @@ export default {
       console.log('WebSocket:',ws);
       ws.onopen = function(evt) { 
         console.log("Connection open ..."); 
-        ws.send("Hello WebSockets!");
+        // ws.send("Hello WebSockets!");
       ws.onmessage = function(evt) {
         console.log( "Received Message: " + evt);
-      }} 
+      }}
+      ws.onclose = function close(evt) {
+        console.log("Connection closed.");
+      }
     },
     toChat() {
       uni.navigateTo({
