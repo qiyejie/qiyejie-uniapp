@@ -1,17 +1,16 @@
 <template>
 	<view class="me">
-    <tui-list-cell arrow @click="toLogin">去登录</tui-list-cell></view>
+		<web-view src="http://localhost:8081/#/me"></web-view>
+	</view>
 </template>
 
 <script>
-import tuiListCell from 'thorui-uni/lib/thorui/tui-list-cell/tui-list-cell'
 
 export default {
 	data() {
 		return {}
 	},
 	components: {
-		'tui-list-cell': tuiListCell
 	},
 	methods: {
 		toLogin() {
@@ -25,8 +24,6 @@ export default {
 
 <style lang="scss" scoped>
 .me {
-	position: absolute;
-	width: 100%;
-	top: var(--status-bar-height);
+
 }
 </style>
