@@ -1,5 +1,5 @@
 import axios from 'axios'
-import Toast from 'thorui-uni/lib/thorui/tui-toast/tui-toast'
+// import Toast from 'thorui-uni/lib/thorui/tui-toast/tui-toast'
 // // import { forceQuit } from '@/utils/login.js'
 import qs from 'qs'
 // import { toastWhiteList } from './config'
@@ -28,7 +28,7 @@ class Request {
 		this.request.interceptors.response.use((config) => {
 			// 对响应数据做些事
 			if (~~config.data.code !== 0) {
-				Toast.show(config.data.message)
+				console.error(config.data.message)
 			}
 			if (~~config.data.code === 411) { // 重新登录
 				console.log('重新登录')

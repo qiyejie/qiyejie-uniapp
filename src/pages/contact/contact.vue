@@ -20,7 +20,7 @@
 							<view class="content">
 								<view class="text-grey">{{item.name}}<text class="text-abc">{{list[sub].name}}</text>君</view>
 								<view class="text-gray text-sm">
-									有{{sub+2}}个主子需要伺候
+									有{{sub+2}}个共同好友
 								</view>
 							</view>
 						</view>
