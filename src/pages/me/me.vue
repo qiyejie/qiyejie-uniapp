@@ -1,6 +1,6 @@
 <template>
 	<view class="me">
-		<web-view src="http://localhost:8081/#/me"></web-view>
+		<web-view src="http://localhost:8080/#/me"></web-view>
 	</view>
 </template>
 
